@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: #03b5d2;
+}
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+    </style>
+    <title>FAQ</title>
+    
+  </head>
+  <body>
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion">
+        <div class="accordion-item">
+          <button id="accordion-button-1" aria-expanded="false">
+            <span class="accordion-title">What is your minimum order quantity for Bulk Bags?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              For some of our standard stock bags, our minimum order is 1 bag from our e-commerce store. 
+              Our minimum order quantity will differ from product to product for Bespoke and Customized bags.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-2" aria-expanded="false">
+            <span class="accordion-title">What material are Bulk Bags made from?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Bulk Bags are made of 100% recyclable polypropylene material.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-3" aria-expanded="false">
+            <span class="accordion-title">What are cross-corner Bulk Bags or Circular Bulk Bags?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Cross-corner / Circular Bulk Bags are made of single tubular fabric in the body 
+              with loops/handles sewn on the body in a cross-corner form i.e. both ends of loops are sewn on adjacent sides.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-4" aria-expanded="false">
+            <span class="accordion-title">What is U+2 panel Bulk Bags?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              U + 2-panel Bulk Bags are the basic design of a bag where the body is made of one U-shaped fabric panel and 2 side fabric panels. These are attached to complete the cube structure of the bag,
+               making the top of the bag completely open and the bottom of the bag completely closed.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a Baffle Bulk Bag or Form Stable Bulk Bag</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Baffle Bulk Bags or Form Stable Bulk Bags have fabric that extends across the corners of the bag to help maintain its shape and to keep it from bulging. 
+              The baffles have holes to allow the bags to fill uniformly.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a Baffle Bulk Bag or Form Stable Bulk Bag</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Baffle Bulk Bags or Form Stable Bulk Bags have fabric that extends across the corners of the bag to help maintain its shape and to keep it from bulging. 
+              The baffles have holes to allow the bags to fill uniformly.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a Discharge Spout Bulk Bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Like Fill Top Bulk Bags these bags have a special discharge tube made of flexible material in the bottom of the bag. 
+              These discharge tubes help in the discharge of material from the bags with a localized point.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is coating or laminating on a Bulk Bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Coating or laminating is a moisture barrier film which is attached to all the fabric of the Bulk Bag. For some applications, a polythene liner inside the bags is a better
+               choice to protect the contents. Neither coating nor a liner will make the bag 100% waterproof.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is meant by “sift proofing”?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              There are many methods of sift-proofing a Bulk Bag. The purpose is to prevent product leakage from the seams.
+               A special felt or soft yarn is sewn into the seams.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What are UN-approved bags?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              UN-approved bags, also known as UN bags or UN-certified bags, are specially designed and tested bulk bags that comply with the United Nations (UN) regulations for the safe transportation of hazardous materials. 
+              These bags are rigorously tested to withstand pressure and potential hazards while transporting dangerous goods.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a food-grade bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A food-grade bag is a packaging container specifically manufactured and certified to be safe for storing, 
+              handling, and transporting food products. These bags are made from non-toxic, odourless materials and meet
+               stringent food safety regulations to ensure the protection and integrity of the food during storage and transportation.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a bulk bag used for?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A bulk bag, also known as a flexible intermediate bulk container (FIBC), is a large, flexible bag designed for the transport and storage of bulk materials. These bags are commonly used in industries such as agriculture, construction, chemicals, mining, and food processing. They are suitable for handling and transporting a wide range of materials, including powders, 
+              granules, aggregates, chemicals, and agricultural products.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is the meaning of a bulk bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              “Bulk bag” refers to a large, flexible container to hold and transport bulk materials. These bags are typically made from woven polypropylene fabric and feature lifting loops for easy handling with forklifts or cranes. 
+              They are also sometimes referred to as FIBC (Flexible Intermediate Bulk Containers) or jumbo bags.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What size is a bulk bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Bulk bags come in various sizes to accommodate different volumes and weight capacities. The most common bulk bag size is approximately 85 cm in width, 85 cm in length, and 85 cm in height. However, it’s important to note that bulk bags can be customized to meet specific requirements, 
+              and their sizes can vary depending on the intended application.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">How many kg is in a bulk bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              The weight capacity of a bulk bag can vary depending on its size and design. A standard bulk bag, often referred to as a one-ton bag, is designed to hold approximately 1,000 kg of material. However, there are bulk bags available with different weight capacities,
+               ranging from smaller packs that have a few hundred kilograms too larger bags that can handle 2,000 kg of material.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What options do I have in the top construction of Bulk Bags?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Irrespective of body design you have 4 options of top construction for Bulk Bags i.e.
+
+              <br>Open Top Bulk Bags
+                <br>Flap Top Bulk Bags
+                <br>Skirt Top Bulk Bags
+                <br>Fill Top Bulk Bags.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is an Open Top Bulk Bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              This is the basic or standard type of Bulk Bag where there is no special feature at the top of the Bulk Bag. 
+              It is simple and easy to use.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a Flap Top Bulk Bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A Flap Top Bulk Bag has an additional flap that can cover the top of the Bulk Bag once filled so that the product inside can be covered 
+              and protected from outside contamination whenever required.  
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a Skirt Top Bulk Bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A Skirt Top is a special filling support feature in a Bulk Bag where additional fabric is sewn on the top border of the Bulk Bag. This can help to avoid spillage during the filling process and after filling the skirt can be gathered and tied off with a cord to cover the product filled inside. The height of the skirt depends on the size of the bag. 
+              They are usually approx. 80-100cm high to allow the user to fully open or close the top as needed.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is a Fill Top Bulk Bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A Fill Top Bulk Bag is a special type of filling system where a tube of flexible woven fabric is attached to the top of the bag so that during filling the tube can cover the hopper tube and the product can be filled easily.
+               The dimensions of the Fill Top are customizable as per the requirement.  
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is an anti-static bulk bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              These are bags made of a special fabric which allows static electricity to discharge safely.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What does SWL stand for?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Safe Working Load. This is the weight that the bag is rated to hold safely.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">Can Bulk Bags be re-used?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Bulk Bags can be re-used under certain conditions. It is recommended that the bag be designed for re-use.
+               Bags could have a defect such as a small hole or unstable loops which would make them unsuitable for re-use.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">Can Bulk Bags be recycled?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Yes. They are made from 100% polypropylene and can be recycled.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is ventilated fabric?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              Ventilated fabric refers to a type of material used in the construction of bulk bags that allows air to pass through the fabric. These ventilated bags are designed for products that require aeration or ventilation during storage and transportation. The ventilation helps to prevent the build-up of moisture, condensation, and odour, making them suitable
+               for items such as agricultural produce, firewood, or other products that benefit from air circulation.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What size bulk bag for logs?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              The size of the bulk bag needed for logs can vary depending on the desired quantity and dimensions of the logs. A standard size for log storage and transportation is a bulk bag with dimensions of approximately 100 cm in width, 100 cm in length, and 100 cm in height. However,
+               it’s advisable to consult with a supplier or expert to determine the most suitable size for your specific requirements.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">How many 25kg bags are in a bulk bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              A standard bulk bag, designed to hold approximately 1,000 kg of material, can typically accommodate around 40 to 50 individual 25 kg bags. However, it’s essential to consider the specific dimensions and weight capacity of the bulk bag you are using, as well as 
+              the size and density of the 25 kg bags, as these factors can vary and affect the exact quantity that can fit in a bulk load.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What does FIBC stand for?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              FIBC stands for Flexible Intermediate Bulk Container. It is a term used to refer to large, flexible bags or containers commonly known as bulk bags or jumbo bags. 
+              FIBCs are designed to handle and transport bulk materials in a safe and efficient manner.
+            </p>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is 30% or 40% rPP?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              rPP stands for recycled polypropylene. The percentages mentioned (30% or 40% rPP) refer to the proportion of recycled polypropylene used in manufacturing a bulk bag. Recycled polypropylene is obtained from reprocessed or regrind polypropylene material, which helps to reduce waste and promote sustainability. 
+              Including a certain percentage of rPP in the bag’s construction can provide environmental benefits using recycled materials.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button id="accordion-button-5" aria-expanded="false">
+            <span class="accordion-title">What is an FIBC / Bulk Bag?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="accordion-content">
+            <p>
+              An FIBC, also known as a bulk bag, is a large, flexible container made from woven polypropylene fabric. These bags are designed for the storage, transportation, and handling of bulk materials such as powders, granules, and aggregates. They typically feature lifting loops for easy handling
+               and are available in various sizes and configurations to suit different applications and weight capacities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="jsm/script.js"></script>
+  </body>
+</html>
